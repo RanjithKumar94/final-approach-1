@@ -446,25 +446,14 @@ if(ac.approach){
 // Store history trail
 
 ac.history.push({
-
     x:ac.x,
     y:ac.y
-
 });
 
 
-// Keep only last 3 points
-
 if(ac.history.length > 3){
-
     ac.history.shift();
-
 }
-        ac.distance -= movement;
-
-
-        if(ac.distance < 0)
-            ac.distance = 0;
 
 
 
