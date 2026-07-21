@@ -338,7 +338,29 @@ function drawAircraft(){
 
         const x = ac.x;
         const y = ac.y;
+// Draw history dots
 
+if(ac.history){
+
+    ctx.fillStyle="#00FF00";
+
+    ac.history.forEach(point=>{
+
+        ctx.beginPath();
+
+        ctx.arc(
+            point.x,
+            point.y,
+            2,
+            0,
+            Math.PI*2
+        );
+
+        ctx.fill();
+
+    });
+
+}
 
         // =====================================
         // Aircraft blip
