@@ -29,7 +29,7 @@ let selectedAircraft = null;
 let unknownBlips = [];
 document.getElementById("rwy26Blip").onclick = function(){
 
-    const start = bearingToXY(050, 60);   // R050 at 60 NM
+    const start = bearingToXY(040, 60);   // R050 at 60 NM
 
     unknownBlips.push({
 
@@ -144,7 +144,7 @@ function updateClock(){
 //--------------------------------------
 function spawnRWY26Unknown() {
 
-    const start = bearingToXY(050, 60);
+    const start = bearingToXY(040, 60);
 
     unknownBlips.push({
         x: start.x,
