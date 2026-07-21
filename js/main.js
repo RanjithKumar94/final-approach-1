@@ -451,7 +451,7 @@ ac.history.push({
 });
 
 
-if(ac.history.length > 3){
+if(ac.history.length > 10){
     ac.history.shift();
 }
 
