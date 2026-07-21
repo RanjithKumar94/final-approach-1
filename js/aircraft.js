@@ -9,7 +9,7 @@ distance:60,
 
 x:0,
 y:0,
-  history:[],
+
   labelAngle:0,
 
 heading:10,
@@ -38,7 +38,7 @@ distance:60,
 
 x:0,
 y:0,
-history:[],
+
   labelAngle:0,
 
 heading:170,
@@ -67,7 +67,7 @@ distance:60,
 
 x:0,
 y:0,
-  history:[],
+  
 labelAngle:0,
 heading:170,
 targetHeading:170,
@@ -95,7 +95,7 @@ distance:60,
 
 x:0,
 y:0,
-  history:[],
+  
 labelAngle:0,
 heading:120,
 targetHeading:120,
@@ -124,7 +124,7 @@ distance:60,
 
 x:0,
 y:0,
-  history:[],
+  
 labelAngle:0,
 heading:250,
 targetHeading:250,
@@ -152,7 +152,7 @@ distance:60,
 
 x:0,
 y:0,
-  history:[],
+  
 labelAngle:0,
 heading:268,
 targetHeading:268,
@@ -180,7 +180,6 @@ distance:60,
 
 x:0,
 y:0,
-  history:[],
 labelAngle:0,
 heading:72,
 targetHeading:72,
@@ -208,7 +207,7 @@ distance:60,
 
 x:0,
 y:0,
-  history:[],
+  
 labelAngle:0,
 heading:300,
 targetHeading:300,
@@ -236,7 +235,7 @@ distance:60,
 
 x:0,
 y:0,
-  history:[],
+
 labelAngle:0,
 heading:10,
 targetHeading:10,
