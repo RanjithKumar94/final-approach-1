@@ -443,17 +443,7 @@ if(ac.approach){
         ac.x += Math.cos(angle) * pixels;
         ac.y += Math.sin(angle) * pixels;
 
-// Store history trail
 
-ac.history.push({
-    x:ac.x,
-    y:ac.y
-});
-
-
-if(ac.history.length > 3){
-    ac.history.shift();
-}
 
 
 
