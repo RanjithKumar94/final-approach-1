@@ -338,7 +338,6 @@ function drawAircraft(){
 
         const x = ac.x;
         const y = ac.y;
-// Draw history dots
 
 
         // =====================================
