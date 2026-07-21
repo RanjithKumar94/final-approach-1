@@ -29,7 +29,7 @@ let selectedAircraft = null;
 let unknownBlips = [];
 document.getElementById("rwy26Blip").onclick = function(){
 
-    const start = bearingToXY(040, 60);   // R050 at 60 NM
+    const start = bearingToXY(35, 60);   // R205 at 60 NM
 
     unknownBlips.push({
 
@@ -144,13 +144,13 @@ function updateClock(){
 //--------------------------------------
 function spawnRWY26Unknown() {
 
-    const start = bearingToXY(040, 60);
+    const start = bearingToXY(35, 60);
 
     unknownBlips.push({
         x: start.x,
         y: start.y,
         heading: 180,
-        speed: 550,
+        speed: 550
         active: true
     });
 
@@ -444,6 +444,11 @@ if(ac.approach){
         ac.y += Math.sin(angle) * pixels;
 
 
+        ac.distance -= movement;
+
+
+        if(ac.distance < 0)
+            ac.distance = 0;
 
 
 
