@@ -301,7 +301,7 @@ function drawUnknownBlips(){
 // ======================================
 
 function drawAircraft(){
-[...aircraft, ...(typeof departures !== "undefined" ? departures : [])].forEach(ac=>{
+
     // Draw unknown traffic
     if(typeof unknownBlips !== "undefined"){
 
@@ -340,29 +340,7 @@ function drawAircraft(){
         const y = ac.y;
 // Draw history dots
 
-// history trail
 
-if(ac.history){
-
-    ctx.fillStyle="#00FF00";
-
-    ac.history.forEach(point=>{
-
-        ctx.beginPath();
-
-        ctx.arc(
-            point.x,
-            point.y,
-            3,
-            0,
-            Math.PI*2
-        );
-
-        ctx.fill();
-
-    });
-
-}
         // =====================================
         // Aircraft blip
         // =====================================
