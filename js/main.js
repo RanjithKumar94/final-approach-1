@@ -29,14 +29,14 @@ let selectedAircraft = null;
 let unknownBlips = [];
 document.getElementById("rwy26Blip").onclick = function(){
 
-    const start = bearingToXY(205, 60);   // R205 at 60 NM
+    const start = bearingToXY(35, 60);   // R205 at 60 NM
 
     unknownBlips.push({
 
         x: start.x,
         y: start.y,
 
-        heading: 360,      // South
+        heading: 180,      // South
         speed: 550,
 
         active: true
@@ -45,7 +45,7 @@ document.getElementById("rwy26Blip").onclick = function(){
 
 };
 // Simulation Time
-let simHour = 5;
+let simHour = 3;
 let simMinute = 0;
 let simSecond = 0;
 
@@ -144,12 +144,12 @@ function updateClock(){
 //--------------------------------------
 function spawnRWY26Unknown() {
 
-    const start = bearingToXY(205, 60);
+    const start = bearingToXY(35, 60);
 
     unknownBlips.push({
         x: start.x,
         y: start.y,
-        heading: 360,
+        heading: 180,
         speed: 550,
         active: true
     });
