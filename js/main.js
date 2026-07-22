@@ -29,7 +29,7 @@ let selectedAircraft = null;
 let unknownBlips = [];
 document.getElementById("rwy26Blip").onclick = function(){
 
-    const start = bearingToXY(35, 60);   // R205 at 60 NM
+    const start = bearingToXY(35, 60);   // R035 at 60 NM
 
     unknownBlips.push({
 
@@ -45,10 +45,9 @@ document.getElementById("rwy26Blip").onclick = function(){
 
 };
 // Simulation Time
-let simHour = 3;
-let simMinute = 0;
+let simHour = 2;
+let simMinute = 59;
 let simSecond = 0;
-
 //--------------------------------------
 // Time Functions
 //--------------------------------------
