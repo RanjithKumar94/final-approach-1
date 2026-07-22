@@ -26,7 +26,6 @@ resumeBtn.onclick = function(){
 
 };
 let selectedAircraft = null;
-let unknownBlips = [];
 document.getElementById("rwy26Blip").onclick = function(){
 
     const start = bearingToXY(35, 60);   // R205 at 60 NM
