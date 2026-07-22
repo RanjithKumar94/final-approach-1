@@ -3,7 +3,7 @@
 // ATC Simulator Engine
 // ======================================
 let simulatorPaused = false;
-let unknownBlips = [];
+
 
 const pauseBtn = document.getElementById("pauseBtn");
 const resumeBtn = document.getElementById("resumeBtn");
@@ -26,16 +26,17 @@ resumeBtn.onclick = function(){
 
 };
 let selectedAircraft = null;
+let unknownBlips = [];
 document.getElementById("rwy26Blip").onclick = function(){
 
-    const start = bearingToXY(35, 60);   // R205 at 60 NM
+    const start = bearingToXY(205, 60);   // R205 at 60 NM
 
     unknownBlips.push({
 
         x: start.x,
         y: start.y,
 
-        heading: 180,      // South
+        heading: 360,      // South
         speed: 550,
 
         active: true
@@ -44,7 +45,7 @@ document.getElementById("rwy26Blip").onclick = function(){
 
 };
 // Simulation Time
-let simHour = 3;
+let simHour = 5;
 let simMinute = 0;
 let simSecond = 0;
 
@@ -143,13 +144,13 @@ function updateClock(){
 //--------------------------------------
 function spawnRWY26Unknown() {
 
-    const start = bearingToXY(35, 60);
+    const start = bearingToXY(205, 60);
 
     unknownBlips.push({
         x: start.x,
         y: start.y,
-        heading: 180,
-        speed: 550
+        heading: 360,
+        speed: 550,
         active: true
     });
 
