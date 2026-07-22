@@ -3,7 +3,7 @@
 // ATC Simulator Engine
 // ======================================
 let simulatorPaused = false;
-
+let unknownBlips = [];
 
 const pauseBtn = document.getElementById("pauseBtn");
 const resumeBtn = document.getElementById("resumeBtn");
