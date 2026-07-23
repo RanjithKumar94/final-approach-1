@@ -78,7 +78,7 @@ verticalSpeed: 0,
 speed:250,
 targetSpeed:250,
 
-ccbETA:"03:21",
+ccbETA:"03:20",
 arrivalPhase:false,
 removeTimer:0,
 landed:false,
