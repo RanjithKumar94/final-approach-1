@@ -45,7 +45,7 @@ document.getElementById("rwy26Blip").onclick = function(){
 
 };
 // Simulation Time
-let simHour = 5;
+let simHour = 3;
 let simMinute = 0;
 let simSecond = 0;
 //--------------------------------------
