@@ -1,323 +1,199 @@
+// ======================================
+// aircraft.js
+// Arrival Aircraft Database
+// ======================================
+
 const aircraft = [
 
 {
-callsign:"GFA103",
-type:"A320",
-route:"G473 NW",
-entryRadial:300,
-distance:60,
-
-x:0,
-y:0,
-
-labelAngle:0,
-
-heading:120,
-targetHeading:120,
-turnDirection:"SHORTEST",
-
-level:180,
-targetLevel:80,
-verticalSpeed:0,
-
-speed:300,
-targetSpeed:300,
-
-ccbETA:"05:13",
-
-arrivalPhase:false,
-removeTimer:0,
-landed:false,
-active:false,
-spawned:false
+    callsign: "AFL515",
+    ssr: "6763",
+    type: "B747",
+    from: "VGHS",
+    route: "R416",
+    ccbETA: "11:18",
+    entryRadial: 70,
+    heading: 250,
+    targetHeading: 250,
+    level: 180,
+    targetLevel: 180,
+    speed: 490,
+    labelAngle: 0,
+    turnDirection: "SHORTEST",
+    verticalSpeed: -1500,
+    active: false,
+    spawned: false,
+    distance: 60,
+    x: 0,
+    y: 0,
+    history: []
 },
 
 {
-callsign:"VTI168",
-type:"A320",
-route:"Q1",
-entryRadial:252,
-distance:60,
-
-x:0,
-y:0,
-
-labelAngle:0,
-
-heading:72,
-targetHeading:72,
-turnDirection:"SHORTEST",
-
-level:180,
-targetLevel:90,
-verticalSpeed:0,
-
-speed:300,
-targetSpeed:300,
-
-ccbETA:"05:15",
-
-arrivalPhase:false,
-removeTimer:0,
-landed:false,
-active:false,
-spawned:false
+    callsign: "CLX044",
+    ssr: "6755",
+    type: "B747",
+    from: "ELLX",
+    route: "G473",
+    ccbETA: "11:21",
+    entryRadial: 300,
+    heading: 120,
+    targetHeading: 120,
+    level: 180,
+    targetLevel: 180,
+    speed: 490,
+    labelAngle: 45,
+    turnDirection: "SHORTEST",
+    verticalSpeed: -1500,
+    active: false,
+    spawned: false,
+    distance: 60,
+    x: 0,
+    y: 0,
+    history: []
 },
 
 {
-callsign:"GIA323",
-type:"B747",
-route:"G473 SE",
-entryRadial:120,
-distance:60,
-
-x:0,
-y:0,
-
-labelAngle:0,
-
-heading:300,
-targetHeading:300,
-turnDirection:"SHORTEST",
-
-level:180,
-targetLevel:100,
-verticalSpeed:0,
-
-speed:300,
-targetSpeed:300,
-
-ccbETA:"05:16",
-
-arrivalPhase:false,
-removeTimer:0,
-landed:false,
-active:false,
-spawned:false
+    callsign: "AIC412",
+    ssr: "6737",
+    type: "A321",
+    from: "VOMM",
+    route: "B425",
+    ccbETA: "11:24",
+    entryRadial: 190,
+    heading: 10,
+    targetHeading: 10,
+    level: 180,
+    targetLevel: 180,
+    speed: 460,
+    labelAngle: 90,
+    turnDirection: "SHORTEST",
+    verticalSpeed: -1500,
+    active: false,
+    spawned: false,
+    distance: 60,
+    x: 0,
+    y: 0,
+    history: []
 },
 
 {
-callsign:"AIC112",
-type:"B747",
-route:"W14",
-entryRadial:350,
-distance:60,
-
-x:0,
-y:0,
-
-labelAngle:0,
-
-heading:170,
-targetHeading:170,
-turnDirection:"SHORTEST",
-
-level:180,
-targetLevel:110,
-verticalSpeed:0,
-
-speed:300,
-targetSpeed:300,
-
-ccbETA:"05:17",
-
-arrivalPhase:false,
-removeTimer:0,
-landed:false,
-active:false,
-spawned:false
+    callsign: "VU-CGQ",
+    ssr: "",
+    type: "HN74",
+    from: "VICG",
+    route: "W14",
+    ccbETA: "11:27",
+    entryRadial: 350,
+    heading: 170,
+    targetHeading: 170,
+    level: 150,
+    targetLevel: 150,
+    speed: 210,
+    labelAngle: 135,
+    turnDirection: "SHORTEST",
+    verticalSpeed: 0,
+    active: false,
+    spawned: false,
+    distance: 60,
+    x: 0,
+    y: 0,
+    history: []
 },
 
 {
-callsign:"SEJ126",
-type:"B738",
-route:"B425",
-entryRadial:190,
-distance:60,
-
-x:0,
-y:0,
-
-labelAngle:0,
-
-heading:10,
-targetHeading:10,
-turnDirection:"SHORTEST",
-
-level:180,
-targetLevel:120,
-verticalSpeed:0,
-
-speed:290,
-targetSpeed:290,
-
-ccbETA:"05:23",
-
-arrivalPhase:false,
-removeTimer:0,
-landed:false,
-active:false,
-spawned:false
+    callsign: "THA715",
+    ssr: "6713",
+    type: "B747",
+    from: "RPLL",
+    route: "G473",
+    ccbETA: "11:31",
+    entryRadial: 120,
+    heading: 300,
+    targetHeading: 300,
+    level: 180,
+    targetLevel: 180,
+    speed: 490,
+    labelAngle: 180,
+    turnDirection: "SHORTEST",
+    verticalSpeed: -1500,
+    active: false,
+    spawned: false,
+    distance: 60,
+    x: 0,
+    y: 0,
+    history: []
 },
 
 {
-callsign:"IGO402",
-type:"A320",
-route:"R416",
-entryRadial:70,
-distance:60,
-
-x:0,
-y:0,
-
-labelAngle:0,
-
-heading:250,
-targetHeading:250,
-turnDirection:"SHORTEST",
-
-level:180,
-targetLevel:130,
-verticalSpeed:0,
-
-speed:290,
-targetSpeed:290,
-
-ccbETA:"05:28",
-
-arrivalPhase:false,
-removeTimer:0,
-landed:false,
-active:false,
-spawned:false
+    callsign: "CPA702",
+    ssr: "6712",
+    type: "B747",
+    from: "OBBI",
+    route: "G473",
+    ccbETA: "11:34",
+    entryRadial: 300,
+    heading: 120,
+    targetHeading: 120,
+    level: 180,
+    targetLevel: 180,
+    speed: 490,
+    labelAngle: 225,
+    turnDirection: "SHORTEST",
+    verticalSpeed: -1500,
+    active: false,
+    spawned: false,
+    distance: 60,
+    x: 0,
+    y: 0,
+    history: []
 },
 
 {
-callsign:"IGO213",
-type:"ATR72",
-route:"R416",
-entryRadial:70,
-distance:60,
-
-x:0,
-y:0,
-
-labelAngle:0,
-
-heading:250,
-targetHeading:250,
-turnDirection:"SHORTEST",
-
-level:120,
-targetLevel:120,
-verticalSpeed:0,
-
-speed:220,
-targetSpeed:220,
-
-ccbETA:"05:32",
-
-arrivalPhase:false,
-removeTimer:0,
-landed:false,
-active:false,
-spawned:false
+    callsign: "CG712",
+    ssr: "6754",
+    type: "DO228",
+    from: "VOHY",
+    route: "W20",
+    ccbETA: "11:37",
+    entryRadial: 170,
+    heading: 350,
+    targetHeading: 350,
+    level: 80,
+    targetLevel: 80,
+    speed: 180,
+    labelAngle: 270,
+    turnDirection: "SHORTEST",
+    verticalSpeed: 0,
+    active: false,
+    spawned: false,
+    distance: 60,
+    x: 0,
+    y: 0,
+    history: []
 },
 
 {
-callsign:"SVA341",
-type:"B747",
-route:"G473 NW",
-entryRadial:300,
-distance:60,
-
-x:0,
-y:0,
-
-labelAngle:0,
-
-heading:120,
-targetHeading:120,
-turnDirection:"SHORTEST",
-
-level:180,
-targetLevel:140,
-verticalSpeed:0,
-
-speed:300,
-targetSpeed:300,
-
-ccbETA:"05:32",
-
-arrivalPhase:false,
-removeTimer:0,
-landed:false,
-active:false,
-spawned:false
-},
-
-{
-callsign:"AIC919",
-type:"A320",
-route:"Q1",
-entryRadial:252,
-distance:60,
-
-x:0,
-y:0,
-
-labelAngle:0,
-
-heading:72,
-targetHeading:72,
-turnDirection:"SHORTEST",
-
-level:180,
-targetLevel:150,
-verticalSpeed:0,
-
-speed:290,
-targetSpeed:290,
-
-ccbETA:"05:36",
-
-arrivalPhase:false,
-removeTimer:0,
-landed:false,
-active:false,
-spawned:false
-},
-
-{
-callsign:"CG712",
-type:"DO228",
-route:"CUSTOM",
-entryRadial:170,
-distance:60,
-
-x:0,
-y:0,
-
-labelAngle:0,
-
-heading:330,
-targetHeading:330,
-turnDirection:"SHORTEST",
-
-level:80,
-targetLevel:80,
-verticalSpeed:0,
-
-speed:180,
-targetSpeed:180,
-
-ccbETA:"05:42",
-
-arrivalPhase:false,
-removeTimer:0,
-landed:false,
-active:false,
-spawned:false
+    callsign: "IGO440",
+    ssr: "6764",
+    type: "A320",
+    from: "VIDP",
+    route: "W14",
+    ccbETA: "11:40",
+    entryRadial: 350,
+    heading: 170,
+    targetHeading: 170,
+    level: 180,
+    targetLevel: 180,
+    speed: 460,
+    labelAngle: 315,
+    turnDirection: "SHORTEST",
+    verticalSpeed: -1500,
+    active: false,
+    spawned: false,
+    distance: 60,
+    x: 0,
+    y: 0,
+    history: []
 }
-
 ];
